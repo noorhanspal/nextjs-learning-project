@@ -1,9 +1,9 @@
 export default function About({ children }) {
   return (
-    <html lang="en">
+    <html>
       <body
       >
-        <h1>hlo about layout</h1>
+        <h1>hlo  admin  layout</h1>
         {children}
       </body>
     </html>
