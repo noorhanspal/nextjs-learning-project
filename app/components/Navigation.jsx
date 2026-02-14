@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import "../globals.css";
 export default function Navigation() {
   return (
    <header className="grid grid-cols-2">

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Thapa Technical",
+    "role": "Frontend Developer",
+    "image": "/team/1.jpg"
+  },
+  {
+    "name": "Vinod Thapa",
+    "role": "Full Stack Developer",
+    "image": "/team/2.jpg"
+  },
+  {
+    "name": "Mike Johnson",
+    "role": "Backend Developer",
+    "image": "/team/3.jpg"
+  },
+  {
+    "name": "Emily Wilson",
+    "role": "Product Manager",
+    "image": "/team/4.jpg"
+  },
+  {
+    "name": "David Leo",
+    "role": "DevOps Engineer",
+    "image": "/team/5.jpg"
+  },
+  {
+    "name": "Anna Brown",
+    "role": "QA Engineer",
+    "image": "/team/6.jpg"
+  }
+]
