@@ -2,6 +2,12 @@ import styles from "./service.module.css";
 import team from "@/data/team.json";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Service Page",
+  description: "this is my service",
+  authors:[{name: "vinod thapa"}, {name: "thapa technical"}]
+};
+
 export default function ServicePage() {
   return (
     <section className={styles.serviceContainer}>
