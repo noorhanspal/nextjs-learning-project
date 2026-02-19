@@ -1,5 +1,6 @@
 const DataFetchServer = async ({ searchParams }) => {
-  const userName = searchParams?.name || "Noor";
+  const params = await searchParams;   // 👈 important line
+  const userName = params?.name || "Noor";
 
   const res = await fetch(
     `https://api.genderize.io/?name=${userName}`,
