@@ -1,16 +1,34 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import "./style.css";
 
-const DataFetchServer = async ({ searchParams }) => {
+const DataFetchClient = () => {
 
-  const params = await searchParams;   // 👈 IMPORTANT
-  const userName = params?.name || "Noor";
+  const searchParams = useSearchParams();
+  const name = searchParams.get("name") || "Noor";
 
-  const res = await fetch(
-    `https://api.genderize.io/?name=${userName}`,
-    { cache: "no-store" }
-  );
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const data = await res.json();
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(
+        `https://api.genderize.io/?name=${name}`
+      );
+      const result = await res.json();
+      setData(result);
+      setLoading(false);
+    };
+
+    fetchData();
+  }, [name]);
+
+  if (loading) {
+    return <div className="main-container">Loading...</div>;
+  }
+
   const probabilityPercent = Math.round(data.probability * 100);
 
   return (
@@ -57,4 +75,4 @@ const DataFetchServer = async ({ searchParams }) => {
   );
 };
 
-export default DataFetchServer;
+export default DataFetchClient;

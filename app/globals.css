@@ -47,3 +47,75 @@ h1, h2, h3 {
 
 
 
+ 
+/* Fullscreen Background */
+.sphere-loader-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #38bdf8;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* 3D Perspective */
+.sphere-wrapper {
+  perspective: 1000px;
+}
+
+/* Rotating Sphere */
+.sphere {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateSphere 6s infinite linear;
+}
+
+/* Circular Rings */
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* Different Axis Rotations */
+.circle1 {
+  transform: rotateX(90deg);
+}
+
+.circle2 {
+  transform: rotateY(90deg);
+}
+
+.circle3 {
+  transform: rotateZ(0deg);
+}
+
+/* Rotation Animation */
+@keyframes rotateSphere {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Text */
+.loading-text {
+  margin-top: 30px;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
