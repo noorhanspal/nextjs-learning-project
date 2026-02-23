@@ -134,6 +134,6 @@ Through this project, I am learning:
 
 ## 👩‍💻 Author
 
-**Your Name**
+Noor
 
 Learning Full-Stack Development 🚀
